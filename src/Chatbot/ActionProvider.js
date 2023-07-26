@@ -64,6 +64,13 @@ class ActionProvider {
     );
     this.addMessageToState(message);
   };
+
+  handleElseBlock = () => {
+    const message = this.createChatBotMessage(
+      "Please use the provided keyword in your text. I am only familiar with the provided keyword. 😔"
+    );
+    this.addMessageToState(message);
+  };
 }
 
 export default ActionProvider;
