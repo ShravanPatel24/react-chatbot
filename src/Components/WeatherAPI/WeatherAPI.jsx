@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import "./WeatherAPI.css";
+
 const WeatherAPI = () => {
   const [data, setData] = useState(null);
 
@@ -30,7 +32,7 @@ const WeatherAPI = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <h3>Today's Weather</h3>
       {data && (
         <p>

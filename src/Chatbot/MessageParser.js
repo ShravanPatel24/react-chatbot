@@ -10,22 +10,16 @@ class MessageParser {
 
     if (lowercase.includes("hello")) {
       this.actionProvider.greet();
-    }
-
-    if (lowercase.includes("javascript") || lowercase.includes("js")) {
+    } else if (lowercase.includes("javascript") || lowercase.includes("js")) {
       this.actionProvider.handleJavascriptQuiz();
-    }
-
-    if (lowercase.includes("python") || lowercase.includes("py")) {
+    } else if (lowercase.includes("python") || lowercase.includes("py")) {
       this.actionProvider.handlePythonQuiz();
-    }
-
-    if (lowercase.includes("react")) {
+    } else if (lowercase.includes("react")) {
       this.actionProvider.handleReactQuiz();
-    }
-    
-    if (lowercase.includes("weather")) {
+    } else if (lowercase.includes("weather")) {
       this.actionProvider.handleWeatherAPI();
+    } else {
+      this.actionProvider.handleElseBlock();
     }
   }
 }
